@@ -1,6 +1,7 @@
 @use '../../style' as s;
 
 .field {
+	
 	display: flex;
 	flex-direction: column;
 	gap: s.space(2);
@@ -33,10 +34,6 @@
 
 		&:focus {
 			border-color: s.color(main);
-		}
-
-		&--error {
-			border-color: s.color(red) !important;
 		}
 	}
 }
