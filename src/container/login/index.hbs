@@ -9,19 +9,27 @@
     </header>
 
     <form class="page__section">
-        <h1 class="page__title">Відновлення паролю</h1>
+        <h1 class="page__title">Вхід</h1>
 
         <div class="form">
             <div class="form__item">
-                {{> field action="recoveryForm.change" label="Ел. адреса" placeholder="Ваш email" type="email"
+                {{> field action="singnupForm.change" label="Ел. адреса" placeholder="Ваш email" type="email"
                 name="email" }}
                 <span name="email" class="form__error">Помилка</span>
             </div>
+            <div class="form__item">
+                {{> field-password action="singnupForm.change" label="Пароль" placeholder="Введіть пароль"
+                type="password"
+                name="password" }}
+                <span name="password" class="form__error">Помилка</span>
+            </div>
         </div>
 
-        <button onclick="recoveryForm.submit()" class="button button--disabled" type="button">Відновити пароль</button>
+        <button onclick="singnupForm.submit()" class="button button--disabled" type="button">Увійти</button>
 
         <span class="alert alert--disabled">Увага, помилка</span>
+
+        <span class="link_prefix">Забули пароль? <a href="/recovery" class="link">Відновити</a></span>
     </form>
 </div>
 
